@@ -33,7 +33,7 @@ function grabDoll(dolls) {
 //https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 function giveMeFive(obj) {
   let arrOfFive = [];
-  for (var key in obj) {
+  for (let key in obj) {
     if (key.length === 5) arrOfFive.push(key);
     if (obj[key].length === 5) arrOfFive.push(obj[key]);
   }

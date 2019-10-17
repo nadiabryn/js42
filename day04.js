@@ -18,3 +18,24 @@ function pickIt(arr) {
   return [odd, even];
 }
 
+//https://www.codewars.com/kata/training-js-number-11-loop-statement-break-continue/train/javascript
+function grabDoll(dolls) {
+  let bag = [];
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] == 'Hello Kitty' || dolls[i] == 'Barbie doll') {
+      bag.push(dolls[i]);
+      if (bag.length === 3) break;
+    } else continue;
+  }
+  return bag;
+}
+
+//https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
+function giveMeFive(obj) {
+  let arrOfFive = [];
+  for (var key in obj) {
+    if (key.length === 5) arrOfFive.push(key);
+    if (obj[key].length === 5) arrOfFive.push(obj[key]);
+  }
+  return arrOfFive;
+}

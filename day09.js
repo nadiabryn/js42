@@ -13,11 +13,8 @@ function cutIt(arr) {
 
 //https://www.codewars.com/kata/training-js-number-17-methods-of-string-object-indexof-lastindexof-and-search/train/javascript
 function firstToLast(str, c) {
-  let k = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === c) k++;
-  }
-  return k > 1 ? k : k === 1 ? 0 : -1;
+  const gap = str.lastIndexOf(c) - str.indexOf(c);
+  return str.includes(c) ? gap : str.indexOf(c);
 }
 
 //https://www.codewars.com/kata/training-js-number-18-methods-of-string-object-concat-split-and-its-good-friend-join/train/javascript
@@ -27,6 +24,5 @@ function splitAndMerge(str, sp) {
   for (const i of arrWords) {
     arrChar.push(i.split('').join(sp));
   }
-
   return arrChar.join(' ');
 }
